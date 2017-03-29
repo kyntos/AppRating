@@ -376,7 +376,7 @@ open class AppRatingManager : NSObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + self.secondsBeforePromptIsShown) {
             if (false && self.useSKStoreReviewController && self.defaultOpensInSKStoreReviewController()) {
                 if #available(iOS 10.3, *) {
-                    //SKStoreReviewController.requestReview();
+                    SKStoreReviewController.requestReview();
                     self.setUserHasRatedApp();
                 }
             } else {
