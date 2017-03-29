@@ -374,7 +374,7 @@ open class AppRatingManager : NSObject {
     fileprivate func showRatingAlert() {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + self.secondsBeforePromptIsShown) {
-            if (false && self.useSKStoreReviewController && self.defaultOpensInSKStoreReviewController()) {
+            if (self.useSKStoreReviewController && self.defaultOpensInSKStoreReviewController()) {
                 if #available(iOS 10.3, *) {
                     SKStoreReviewController.requestReview();
                     self.setUserHasRatedApp();
